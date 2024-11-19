@@ -27,22 +27,17 @@ pub async fn send_update(domain: &str, token: &str,txt :Option<String>) -> Resul
 
     // Handle the response
     if res.status().is_success() {
-        entry_for_log(&format!(r#"**************************************************\n
+        let _ = entry_for_log(&format!(r#"**************************************************
         Dominio {} actualizado con éxito. 
-        \n
         {:?}
-        \n
-        **************************************************\n
-        "#,domain,res));
+        **************************************************"#,domain,res));
         Ok(())
     } else {
-        entry_for_log(&format!(r#"**************************************************\n
-        Error al actualizar Dominio {}. 
-        \nDetalles: \n
-        {:?}
-        \n
-        **************************************************\n
-        "#,domain,res));
+        let _ = entry_for_log(&format!(r#"**************************************************
+Error al actualizar Dominio {}. 
+Detalles:
+{:?}
+**************************************************"#,domain,res));
         Err(Box::new(std::io::Error::new(
             std::io::ErrorKind::Other,
             format!("Request failed with status: {}", res.status()),

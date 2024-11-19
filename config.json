@@ -1,0 +1,23 @@
+[
+    {
+      "domain": "ptechsoftware",
+      "token": "988fe512-7f16-4fa1-91f3-85072716f79c",
+      "txt" : null
+    },
+    {
+      "domain" : "ptechcloud",
+      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+      "txt" : "google-site-verification=f4uePX3Sz-uLN3e_pkjzulQ6dayfO0pyJc2xYXgJg1g"
+    }
+    ,
+    {
+      "domain" : "ptechsonar",
+      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+      "txt" : null
+    },
+    {
+      "domain" : "ptechsonar1",
+      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+      "txt" : null
+    }
+  ]

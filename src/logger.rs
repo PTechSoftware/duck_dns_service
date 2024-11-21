@@ -1,4 +1,5 @@
-use std::fs::OpenOptions;
+use std::fs;
+use std::fs::{File, OpenOptions};
 use std::io::{self, Read, Write, Seek, SeekFrom};
 use chrono::Local;
 
@@ -33,5 +34,29 @@ pub fn entry_for_log(line: &str) -> io::Result<()> {
     file.write_all(log_entry.as_bytes())?;
     file.write_all(contents.as_bytes())?;
 
+    Ok(())
+}
+
+
+
+pub fn purge_log() -> io::Result<()> {
+    let file_path = "log.txt"; // Path to your log file
+    const MAX_SIZE: u64 = 3 * 1024 * 1024; // 3 MB in bytes
+
+    match fs::metadata(file_path) {
+        Ok(metadata) => {
+            let file_size = metadata.len();
+            if file_size > MAX_SIZE {
+                fs::remove_file(file_path)?;
+                println!("File {} exceeded 3 MB and was deleted.", file_path);
+            } else {
+                println!(
+                    "File {} is within the size limit ({} bytes). No action taken.",
+                    file_path, file_size
+                );
+            }
+        }
+        Err(e) => eprintln!("Failed to access metadata for {}: {}", file_path, e),
+    }
     Ok(())
 }

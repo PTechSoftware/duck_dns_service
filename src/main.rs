@@ -35,6 +35,7 @@ async fn main() -> io::Result<()>{
                 _ = entry_for_log("Error reading file");
             }
         }
+        _ = logger::purge_log();
         // Pausa de 30 segundos
         thread::sleep(Duration::from_secs(30));
     }

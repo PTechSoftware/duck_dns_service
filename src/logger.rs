@@ -1,5 +1,5 @@
 use std::fs;
-use std::fs::{File, OpenOptions};
+use std::fs::OpenOptions;
 use std::io::{self, Read, Write, Seek, SeekFrom};
 use chrono::Local;
 

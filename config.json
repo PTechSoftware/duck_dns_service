@@ -19,5 +19,15 @@
       "domain" : "ptechsonar1",
       "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
       "txt" : null
+    },
+    {
+      "domain" : "ptechcontainers",
+      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+      "txt" : null
+    },
+    {
+      "domain" : "ptechrancher",
+      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+      "txt" : null
     }
   ]

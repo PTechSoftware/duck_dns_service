@@ -1,9 +1,17 @@
 services:
   dns-service-ptech:
-    image: ptech_duck_dns:latest
+    image: ptechcontainers.duckdns.org/ptech_duck_dns:latest
     ports:
       - "4443:443" # Mapea el puerto del contenedor al host
       - "8080:443"
     environment:
-      RUST_LOG: "info" # Define variables de entorno si tu aplicación las usa
+      RUST_LOG: "info" # Define variables de entorno si tu aplicaci  n las usa
     restart: always # Reinicia el contenedor si falla
+
+    networks:
+      - ptech-network # Attach to the custom network
+    platform: "linux/amd64" # Especifica la plataforma expl  citamente
+
+networks:
+   ptech-network:
+     driver: bridge # Specify the bridge network driver

@@ -1,0 +1,14 @@
+[Unit]
+Description=$SERVICE_DESCRIPTION
+After=network.target
+
+[Service]
+ExecStart=/app/duck_dns_service
+Restart=always
+User=$USER
+Group=$GROUP
+Environment=RUST_LOG=info # Variables de entorno, si las necesitas
+WorkingDirectory=$(dirname $EXECUTABLE_PATH)
+
+[Install]
+WantedBy=multi-user.target

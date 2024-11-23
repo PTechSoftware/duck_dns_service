@@ -7,7 +7,6 @@ services:
     environment:
       RUST_LOG: "info" # Define variables de entorno si tu aplicaci  n las usa
     restart: always # Reinicia el contenedor si falla
-
     networks:
       - ptech-network # Attach to the custom network
     platform: "linux/amd64" # Especifica la plataforma expl  citamente

@@ -39,4 +39,4 @@ RUN touch log.txt
 EXPOSE 4443 8080
 
 # Run the application
-CMD ["./duck_dns_service"]
+CMD [ "./duck_dns_service" ]

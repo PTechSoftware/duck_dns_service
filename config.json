@@ -1,41 +1,31 @@
 [
-    {
-      "domain": "ptechsoftware",
-      "token": "988fe512-7f16-4fa1-91f3-85072716f79c",
-      "txt" : null
-    }, {
-      "domain": "nubeptech",
-      "token": "988fe512-7f16-4fa1-91f3-85072716f79c",
-      "txt" : null
-    }, {
-      "domain": "ptechproxmox",
-      "token": "988fe512-7f16-4fa1-91f3-85072716f79c",
-      "txt" : null
-    },
-    {
-      "domain" : "ptechcloud",
-      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
-      "txt" : "google-site-verification=f4uePX3Sz-uLN3e_pkjzulQ6dayfO0pyJc2xYXgJg1g"
-    }
-    ,
-    {
-      "domain" : "ptechsonar",
-      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
-      "txt" : null
-    },
-    {
-      "domain" : "ptechsonar1",
-      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
-      "txt" : null
-    },
-    {
-      "domain" : "ptechcontainers",
-      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
-      "txt" : null
-    },
-    {
-      "domain" : "ptechrancher",
-      "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
-      "txt" : null
-    }
-  ]
+  {
+    "domain": "ptechsoftware",
+    "token": "988fe512-7f16-4fa1-91f3-85072716f79c",
+    "txt" : "google-site-verification=q5RVR0Ks4p1KeBg9feC41fGQUkB_a4wDCVB66jNkvVE"
+  }, {
+    "domain": "nubeptech",
+    "token": "988fe512-7f16-4fa1-91f3-85072716f79c",
+    "txt" : "google-site-verification=aUGfTG9ymFky8XdXe_eo4j3DEYzhuGv-DJRlJmjU79E"
+  }, {
+    "domain": "ptechproxmox",
+    "token": "988fe512-7f16-4fa1-91f3-85072716f79c",
+    "txt" : "google-site-verification=3y2I3BjJyWBS8YX9dHsyoNLwQPofZ-T-7kifwT56PXo"
+  },
+  {
+    "domain" : "ptechcloud",
+    "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+    "txt" : "google-site-verification=f4uePX3Sz-uLN3e_pkjzulQ6dayfO0pyJc2xYXgJg1g"
+  }
+  ,
+  {
+    "domain" : "ptechcontainers",
+    "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+    "txt" : "google-site-verification=a2v6hqmCEgSqM2p4WHuLuFzkk36-A1ZfJuUXTm7Y1l8"
+  },
+  {
+    "domain" : "ptechrancher",
+    "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+    "txt" : "google-site-verification=rWllkfNxRRz5fWffl1kGwOkbaI4EhiW9y1bb4dvgdwM"
+  }
+]

@@ -41,7 +41,7 @@ pub fn entry_for_log(line: &str) -> io::Result<()> {
 
 pub fn purge_log() -> io::Result<()> {
     let file_path = "log.txt"; // Path to your log file
-    const MAX_SIZE: u64 = 3 * 1024 * 1024; // 3 MB in bytes
+    const MAX_SIZE: u64 = 512 * 1024; 
 
     match fs::metadata(file_path) {
         Ok(metadata) => {

@@ -1,8 +1,32 @@
 use reqwest::Client;
-use std::error::Error;
+use std::{error::Error, process::Command};
 
 use crate::logger::entry_for_log;
 
+pub fn get_public_ip() -> Result<String, Box<dyn Error>> {
+    let output = if cfg!(target_os = "windows") {
+        Command::new("nslookup")
+            .arg("myip.opendns.com")
+            .arg("resolver1.opendns.com")
+            .output()?
+    } else {
+        Command::new("dig")
+            .arg("+short")
+            .arg("myip.opendns.com")
+            .arg("@resolver1.opendns.com")
+            .output()?
+    };
+
+    if output.status.success() {
+        let ip = String::from_utf8(output.stdout)?.trim().to_string();
+        Ok(ip)
+    } else {
+        Err(Box::new(std::io::Error::new(
+            std::io::ErrorKind::Other,
+            "Failed to get public IP",
+        )))
+    }
+}
 
 #[allow(dead_code)]
 pub async fn send_update(domain: &str, token: &str,txt :Option<String>) -> Result<(), Box<dyn Error>> {
@@ -54,4 +78,9 @@ mod test {
 
     }
 
+    #[test]
+    fn test_get_ip(){
+        let ip = super::get_public_ip().unwrap();
+        println!("{}",ip);
+    }
 }

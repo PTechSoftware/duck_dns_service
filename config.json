@@ -16,8 +16,7 @@
     "domain" : "ptechcloud",
     "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
     "txt" : "google-site-verification=f4uePX3Sz-uLN3e_pkjzulQ6dayfO0pyJc2xYXgJg1g"
-  }
-  ,
+  } ,
   {
     "domain" : "ptechcontainers",
     "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
@@ -27,5 +26,15 @@
     "domain" : "ptechrancher",
     "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
     "txt" : "google-site-verification=rWllkfNxRRz5fWffl1kGwOkbaI4EhiW9y1bb4dvgdwM"
+  },
+  {
+    "domain" : "ptechsonar",
+    "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+    "txt" : "google-site-verification=w-8Qyyp5ihQXsZw84GK6wNdJ4fIiMolO1oTBOeB9nR0"
+  },
+  {
+    "domain" : "rabbitmqsrv",
+    "token" : "b2f08b23-ebf1-4d4b-8132-327b9def1bf1",
+    "txt" : "google-site-verification=2PVhvZIFBE9KvDJ62Pz87kvNmZ3yQCS7N11jAO_pllw"
   }
 ]

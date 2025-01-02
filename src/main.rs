@@ -2,7 +2,6 @@ use std::{error::Error,fs::File, io::{self, BufReader}, thread, time::Duration};
 use duck_comunicate::{get_public_ip, send_update, send_update_no_ip};
 use logger::entry_for_log;
 use models::entry::Entry;
-use tokio::task::LocalEnterGuard;
 
 mod models;
 mod duck_comunicate;

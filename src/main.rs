@@ -39,7 +39,8 @@ async fn main() -> io::Result<()>{
         }else{
             _update_ip = false;
         }
-        if _update_ip {
+        while _update_ip {
+            let mut error_counter = 0_i32;
             match read_file() {
                 Ok(entries) => {
                     _sites_count = entries.len();
@@ -60,6 +61,7 @@ async fn main() -> io::Result<()>{
                                 },
                                 Err(_) => {
                                     log_res.push(format!("Error al actualizar Dominio {}",entry.domain));
+                                    error_counter = error_counter+1;
                                 }
                             }
                         }else{
@@ -78,6 +80,7 @@ async fn main() -> io::Result<()>{
                                 },
                                 Err(_) => {
                                     log_res.push(format!("Error al actualizar Dominio {}",entry.domain));
+                                    error_counter = error_counter+1;
                                 }
                             }
                             
@@ -89,9 +92,15 @@ async fn main() -> io::Result<()>{
                 Err(_e) => {
                     // Loguear el error si ocurre
                     _ = entry_for_log("Error reading file");
+                    error_counter = error_counter+1;
                 }
             }
             _ = logger::purge_log();
+            if error_counter == 0 {
+                _update_ip = false;
+            }else{
+                _update_ip = true;
+            }
         }
         // Pausa de 30 segundos
         thread::sleep(Duration::from_secs(30));

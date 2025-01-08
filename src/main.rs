@@ -39,8 +39,11 @@ async fn main() -> io::Result<()>{
         }else{
             _update_ip = false;
         }
-        while _update_ip {
+        //contador de reintentos
+        let mut ttl = 0;
+        while _update_ip || ttl > 5 {
             let mut error_counter = 0_i32;
+            ttl = ttl + 1;
             match read_file() {
                 Ok(entries) => {
                     _sites_count = entries.len();
